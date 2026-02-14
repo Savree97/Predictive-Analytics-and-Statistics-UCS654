@@ -1,6 +1,6 @@
 # TOPSIS Multi-Criteria Decision Analysis  
 ### UCS654 – Predictive Analytics & Statistics  
-**Version: 0.0.3**
+
 
 ---
 
@@ -40,6 +40,9 @@ python 102317097.py input.csv "1,1,1,1" "+,+,-,+" result.csv
 Generates a CSV file with:
 - Topsis Score
 - Rank
+
+![Sample Output](images/sample_output.png)
+
 
 ---
 
@@ -165,11 +168,9 @@ TOPSIS-Assignment/
 
 **Savree Dohar**  
 Roll Number: 102317097  
-B.Tech CSE – Thapar Institute of Engineering and Technology  
 
 PyPI Package:  
 https://pypi.org/project/Topsis-Savree-102317097/
 
 ---
 
-⭐ If you found this useful, consider starring the repository!
