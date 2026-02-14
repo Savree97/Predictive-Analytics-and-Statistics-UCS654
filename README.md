@@ -1,98 +1,94 @@
-# TOPSIS Multi-Criteria Decision Analysis  
-### UCS654 – Predictive Analytics & Statistics  
-
+# 🧮 TOPSIS Multi-Criteria Decision Analysis  
+### UCS654 – Predictive Analytics & Statistics 
 
 ---
 
 ## 📌 Project Overview
 
-This repository contains three complete implementations of the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** algorithm:
+This repository contains a complete implementation of the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** algorithm developed as part of the UCS654 coursework.
 
-TOPSIS is a multi-criteria decision-making technique that ranks alternatives based on their distance from the ideal best and ideal worst solutions.
+TOPSIS is a multi-criteria decision-making method that ranks alternatives based on their distance from:
 
-This project includes:
+- ✅ Ideal Best Solution  
+- ❌ Ideal Worst Solution  
 
-| Program | Description |
-|---------|------------|
-| Program 1 | Command-line Python implementation |
-| Program 2 | Published PyPI package (`topsis-savree-102317097`) |
-| Program 3 | Flask-based Web Application |
+The closer an alternative is to the ideal best and farther from the ideal worst, the higher its rank.
 
 ---
 
-# 🚀 Program 1: Command-Line Implementation
+# 🚀 Implementations Included
 
-Standalone Python script to perform TOPSIS analysis.
+This project provides three different implementations of TOPSIS:
 
-### ▶️ Usage
-
-```bash
-python 102317097.py input.csv "1,1,1,1" "+,+,-,+" result.csv
-```
-
-### 📥 Input Requirements
-- First column: Names / Alternatives
-- Remaining columns: Numeric criteria values
-- Weights: Comma-separated numbers
-- Impacts: Comma-separated (+ for benefit, - for cost)
-
-### 📤 Output
-Generates a CSV file with:
-- Topsis Score
-- Rank
-
-![Sample Output](sample_output.png)
-
+| Module | Type | Description |
+|--------|------|-------------|
+| Program 1 | CLI Tool | Standalone Python script |
+| Program 2 | PyPI Package | Installable Python library |
+| Program 3 | Web App | Flask-based web interface |
 
 ---
 
-# 📦 Program 2: PyPI Package (Version 0.0.3)
+# 1️⃣ Command Line Implementation
 
-Published package:  
-👉 https://pypi.org/project/Topsis-Savree-102317097/
+A simple Python script that runs TOPSIS directly from the terminal.
 
-### 📥 Install
-
-```bash
-pip install topsis-savree-102317097==0.0.3
-```
-
-### ▶️ Usage
+### ▶ Usage
 
 ```bash
-topsis input.csv "1,1,1,1" "+,+,-,+" result.csv
+python 102317097.py input.csv "1,2,1,1" "+,+,-,+"
 ```
+
+### 📥 Input Format
+
+| Column | Description |
+|--------|-------------|
+| Column 1 | Alternative Names |
+| Remaining Columns | Numeric Criteria Values |
+
+Example:
+
+| Fund Name | P1 | P2 | P3 | P4 | P5 |
+|-----------|----|----|----|----|----|
+| M1 | 0.68 | 0.46 | 7 | 38.3 | 11.61 |
+| M2 | 0.71 | 0.50 | 3.7 | 54.8 | 14.93 |
 
 ---
 
-# 🌐 Program 3: Web Application
+# 2️⃣ PyPI Package (Version 0.0.3)
 
-A Flask-based web interface to perform TOPSIS analysis through a browser.
+The algorithm is also published as an installable Python package.
 
-## ⚙️ Dependencies
-
-Install required libraries before running:
+### 📦 Installation
 
 ```bash
-pip install numpy pandas flask topsis-savree-102317097==0.0.3
+pip install Topsis-Savree-102317097==0.0.3
 ```
 
-Recommended Python version:
+### ▶ Usage
+
+```bash
+topsis input.csv "1,2,1,1" "+,+,-,+"
 ```
-Python 3.8+
-```
+
+### 🔗 PyPI Link
+
+https://pypi.org/project/Topsis-Savree-102317097/
 
 ---
 
-## ▶️ Run the Web App
+# 3️⃣ Web Application
 
-Navigate to the WebApp folder:
+A lightweight Flask web interface for running TOPSIS without using the terminal.
+
+### 💻 Run Locally
+
+First install dependencies:
 
 ```bash
-cd "Program III- WebApp"
+pip install flask numpy pandas
 ```
 
-Run:
+Then run:
 
 ```bash
 python app1.py
@@ -106,72 +102,55 @@ http://127.0.0.1:5000
 
 ---
 
-# 📊 Input Format
+# 📊 Output
 
-## Example CSV File
+The system generates a ranked CSV file containing:
 
-| Model | Price | Storage | Camera | Looks |
-|-------|-------|---------|--------|-------|
-| M1 | 250 | 16 | 12 | 5 |
-| M2 | 200 | 16 | 8 | 3 |
+- **Topsis Score**
+- **Rank**
 
-### Weights:
+### 📈 Sample Output
+
+![Sample Output](sample_output.png)
+
+---
+
+# 🛠 Technologies Used
+
+- Python
+- NumPy
+- Pandas
+- Flask
+- PyPI Packaging
+
+---
+
+# 📂 Repository Structure
+
 ```
-1,2,1,1
-```
-
-### Impacts:
-```
-+,+,-,+
+Program1/              # CLI implementation
+Program2/              # PyPI package source
+Program3/              # Flask web application
+images/                # README assets
+README.md
 ```
 
 ---
 
-# 🗂 Repository Structure
+# ✨ Key Features
 
-```
-TOPSIS-Assignment/
-│
-├── Program1/
-│   ├── 102317097.py
-│   ├── 102317097-data.csv
-│   └── 102317097-result.csv
-│
-├── Program2/
-│   ├── topsis_savree_102317097/
-│   ├── setup.py
-│   └── README.md
-│
-├── Program III- WebApp/
-│   ├── app1.py
-│   ├── templates/
-│   │   └── index.html
-│   └── uploads/
-│
-└── README.md
-```
+✔ Normalization of decision matrix  
+✔ Weighted scoring  
+✔ Ideal best & worst computation  
+✔ Distance calculation  
+✔ Final ranking generation  
+✔ Available as CLI, Package, and Web App  
 
 ---
 
-# ✨ Features
-
-✔ Multi-criteria decision ranking  
-✔ CLI implementation  
-✔ Published PyPI package  
-✔ Web-based interface  
-✔ Automatic result generation  
-✔ Clean modular structure  
-
----
-
-# 👤 Author
+# 👩‍💻 Author
 
 **Savree Dohar**  
-Roll Number: 102317097  
-
-PyPI Package:  
-https://pypi.org/project/Topsis-Savree-102317097/
-
----
+**Roll No:** 102317097  
 
 
