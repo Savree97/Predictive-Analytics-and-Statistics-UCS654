@@ -11,7 +11,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="Topsis-Savree-102317097",
-    version="0.0.1",
+    version="0.0.2",
     author="Savree Dohar",
     author_email="sdohar_be23@thapar.edu",
     description="TOPSIS implementation as a Python package",
