@@ -41,7 +41,7 @@ Generates a CSV file with:
 - Topsis Score
 - Rank
 
-![Sample Output](images/sample_output.png)
+![Sample Output](sample_output.png)
 
 
 ---
@@ -173,4 +173,5 @@ PyPI Package:
 https://pypi.org/project/Topsis-Savree-102317097/
 
 ---
+
 
