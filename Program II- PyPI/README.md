@@ -1,90 +1,98 @@
 # Topsis-Savree-102317097
 
-A Python package implementing TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) for multi-criteria decision analysis.
+A lightweight Python implementation of the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) method for multi-criteria decision analysis.
+
+This package allows users to rank alternatives based on weighted criteria using distance-based evaluation from ideal best and worst solutions.
 
 ---
 
-## What is TOPSIS?
+## Why Use This Package?
 
-TOPSIS is a multi-criteria decision-making method that ranks alternatives based on:
-- Shortest distance from the ideal best solution
-- Farthest distance from the ideal worst solution
-
-It is widely used in decision science, engineering, and management problems.
+- Simple command-line interface
+- Easy Python integration
+- Automatic validation of inputs
+- Clean output with score and rank
+- Suitable for academic and decision-analysis problems
 
 ---
 
 ## Installation
 
-Install from PyPI:
+Install directly from PyPI:
 
 pip install Topsis-Savree-102317097
 
 ---
 
-## Command Line Usage
+## Command Line Execution
 
-topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
+topsis <input_file> <weights> <impacts> <output_file>
 
 Example:
 
-topsis input.csv "1,1,1,2" "+,+,-,+" result.csv
+topsis data.csv "1,2,1,1" "+,+,-,+" result.csv
 
 ---
 
-## Python Usage
+## Using in Python
 
 from topsis_savree_102317097.topsis import topsis
 
-topsis("input.csv", "1,1,1,2", "+,+,-,+", "result.csv")
+topsis("data.csv", "1,2,1,1", "+,+,-,+", "result.csv")
 
 ---
 
-## Input File Format
+## Input Requirements
 
-- CSV file with 3 or more columns
-- First column: Alternative names
-- Remaining columns: Numeric values only
+• CSV file with at least three columns  
+• First column → Alternative names  
+• Remaining columns → Numeric criteria values  
 
 Example:
 
-Model,Price,Storage,Camera
-M1,250,16,12
-M2,200,16,8
-M3,300,32,16
+Option,Cost,Quality,Durability
+A1,250,7,8
+A2,200,6,9
+A3,300,8,7
 
 ---
 
 ## Parameters
 
-- Weights: Comma-separated numeric values
-- Impacts: Comma-separated + or - symbols  
-  + → Benefit criterion  
-  - → Cost criterion  
+Weights:
+Comma-separated numeric values (e.g., "1,1,2")
+
+Impacts:
+Comma-separated symbols:
++  → Benefit criterion (higher is better)  
+-  → Cost criterion (lower is better)
 
 ---
 
 ## Output
 
-The result file contains:
-- All original columns
-- Topsis Score
-- Rank
+The generated CSV file includes:
+• Original data  
+• Calculated Topsis Score  
+• Final Rank  
+
+Higher score indicates better performance.
 
 ---
 
 ## Error Handling
 
-The package handles:
-- Invalid file format
-- Non-numeric values
-- Mismatched weights & impacts
-- Invalid impact symbols
+The package checks for:
+
+• Incorrect number of weights or impacts  
+• Invalid impact symbols  
+• Non-numeric values in criteria columns  
+• File not found errors  
 
 ---
 
-## Author
+## Developed By
 
-Savree Dohar
+Savree Dohar  
 Roll No: 102317097  
 UCS654 – Predictive Analytics & Statistics
