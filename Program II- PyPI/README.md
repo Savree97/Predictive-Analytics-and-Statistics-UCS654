@@ -48,12 +48,14 @@ topsis("data.csv", "1,2,1,1", "+,+,-,+", "result.csv")
 • First column → Alternative names  
 • Remaining columns → Numeric criteria values  
 
-Example:
 
-Option,Cost,Quality,Durability
-A1,250,7,8
-A2,200,6,9
-A3,300,8,7
+### Example Input
+
+| Option | Cost | Quality | Durability |
+|--------|------|---------|------------|
+| A1     | 250  | 7       | 8          |
+| A2     | 200  | 6       | 9          |
+| A3     | 300  | 8       | 7          |
 
 ---
 
@@ -96,3 +98,4 @@ The package checks for:
 Savree Dohar  
 Roll No: 102317097  
 UCS654 – Predictive Analytics & Statistics
+
